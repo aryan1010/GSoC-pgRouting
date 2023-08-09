@@ -73,12 +73,16 @@ do_pgr_driving_many_to_dist(
 
         if (directedFlag) {
             pgrouting::DirectedGraph digraph(vertices, gType);
+
             digraph.insert_edges(data_edges, total_edges, true);
+
             paths = pgr_drivingDistance(
                     digraph, start_vertices, distance, equiCostFlag, log);
         } else {
             pgrouting::UndirectedGraph undigraph(vertices, gType);
+
             undigraph.insert_edges(data_edges, total_edges, true);
+
             paths = pgr_drivingDistance(
                     undigraph, start_vertices, distance, equiCostFlag, log);
         }
