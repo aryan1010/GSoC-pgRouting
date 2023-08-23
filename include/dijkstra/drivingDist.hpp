@@ -443,7 +443,6 @@ class Pgr_dijkstra {
          return paths;
      }
 
-
      // preparation for many to distance No equicost
      std::deque< Path > drivingDistance_no_equicost(
              G &graph,
